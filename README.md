@@ -3,8 +3,8 @@
 Passo 1: Instalar o Oracle VM VirtualBox
   - Baixe e instale o Oracle VM VirtualBox a partir do site oficial: VirtualBox.
 
-Passo 2: Baixar a imagem do Ubuntu
-  - Baixe a ISO do Ubuntu a partir do site oficial: Ubuntu Downloads.
+Passo 2: Baixar a imagem do Debian
+  - Baixe a ISO do Debian a partir do site oficial: www.debian.org
 
 Passo 3: Criar uma nova máquina virtual
   - Abra o VirtualBox.
@@ -26,34 +26,34 @@ Passo 5: Iniciar a máquina virtual
   - Siga as instruções na tela para instalar o Debian.
     
 Passo 6: Instalar o Nginx
-Atualize os pacotes. Abra o terminal e digite:
+- Atualize os pacotes. Abra o terminal e digite:
   sudo apt update
   sudo apt upgrade
 
-Instale o Nginx:
+- Instale o Nginx:
   sudo apt install nginx
 
 Passo 7: Iniciar o Nginx
-  Inicie o Nginx com o comando:
+- Inicie o Nginx com o comando:
   sudo systemctl start nginx
   
-Verifique se o Nginx está rodando:
+- Verifique se o Nginx está rodando:
   sudo systemctl status nginx
   
 Passo 8: Testar a instalação
-  Abra um navegador e digite o IP da sua máquina virtual (você pode descobrir o IP com ifconfig ou ip addr).
+- Abra um navegador e digite o IP da sua máquina virtual (você pode descobrir o IP com ifconfig ou ip addr).
   Você deve ver a página padrão do Nginx.
 
 Passo 9: Configurações adicionais (opcional)
-  Para iniciar o Nginx automaticamente na inicialização:
+- Para iniciar o Nginx automaticamente na inicialização:
   sudo systemctl enable nginx
   
-Para configurar Nginx para um site específico, edite ou crie arquivos de configuração na pasta /etc/nginx/sites-available/.
+- Observação: Para configurar Nginx para um site específico, edite ou crie arquivos de configuração na pasta /etc/nginx/sites-available/.
 
 Passo 10: Manutenção
-  Para parar o Nginx:
+- Para parar o Nginx:
   sudo systemctl stop nginx
   
-Para reiniciar o Nginx:
+- Para reiniciar o Nginx:
   sudo systemctl restart nginx
 
