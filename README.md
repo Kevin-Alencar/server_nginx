@@ -24,4 +24,36 @@ Passo 4: Configurar a máquina virtual
 Passo 5: Iniciar a máquina virtual
   - Clique em "Iniciar" para ligar a máquina virtual.
   - Siga as instruções na tela para instalar o Debian.
+    
+Passo 6: Instalar o Nginx
+Atualize os pacotes. Abra o terminal e digite:
+  sudo apt update
+  sudo apt upgrade
+
+Instale o Nginx:
+  sudo apt install nginx
+
+Passo 7: Iniciar o Nginx
+  Inicie o Nginx com o comando:
+  sudo systemctl start nginx
   
+Verifique se o Nginx está rodando:
+  sudo systemctl status nginx
+  
+Passo 8: Testar a instalação
+  Abra um navegador e digite o IP da sua máquina virtual (você pode descobrir o IP com ifconfig ou ip addr).
+  Você deve ver a página padrão do Nginx.
+
+Passo 9: Configurações adicionais (opcional)
+  Para iniciar o Nginx automaticamente na inicialização:
+  sudo systemctl enable nginx
+  
+Para configurar Nginx para um site específico, edite ou crie arquivos de configuração na pasta /etc/nginx/sites-available/.
+
+Passo 10: Manutenção
+  Para parar o Nginx:
+  sudo systemctl stop nginx
+  
+Para reiniciar o Nginx:
+  sudo systemctl restart nginx
+
