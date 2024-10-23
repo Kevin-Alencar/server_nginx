@@ -1,5 +1,4 @@
 # server_nginx
-
 Passo 1: Instalar o Oracle VM VirtualBox
   - Baixe e instale o Oracle VM VirtualBox a partir do site oficial: VirtualBox.
 
@@ -64,6 +63,10 @@ Passo 10: Manutenção
 
   - Após colar na URL do navegador:
     ![image](https://github.com/user-attachments/assets/e14b5b3d-1c05-4b78-a9e5-22278d609cf8)
+    
+  Parabéns, seu servidor está rodando conforme o esperado.
+  
+    
 
 
 
