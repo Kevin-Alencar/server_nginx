@@ -27,7 +27,7 @@ markdown
 
 ### 5️⃣ Iniciar a Máquina Virtual
 - Clique em "Iniciar" para ligar a máquina virtual.
-- Siga as instruções na tela para instalar o Debian.
+- Siga as instruções na tela para instalar o Debian. 
 
 ### 6️⃣ Instalar o Nginx
 - Atualize os pacotes. Abra o terminal e digite:
@@ -36,33 +36,39 @@ markdown
   sudo apt upgrade
 Instale o Nginx:
 sudo apt install nginx
-7️⃣ Iniciar o Nginx
+
+### 7️⃣ Iniciar o Nginx
 Inicie o Nginx com o comando:
 
 sudo systemctl start nginx
 Verifique se o Nginx está rodando:
 
 sudo systemctl status nginx
-8️⃣ Testar a Instalação
+
+### 8️⃣ Testar a Instalação
 Abra um navegador e digite o IP da sua máquina virtual (descubra o IP com ifconfig ou ip addr). Você deve ver a página padrão do Nginx.
-9️⃣ Configurações Adicionais (Opcional)
+
+### 9️⃣ Configurações Adicionais (Opcional)
 Para iniciar o Nginx automaticamente na inicialização:
 
 sudo systemctl enable nginx
 Para configurar Nginx para um site específico, edite ou crie arquivos de configuração na pasta /etc/nginx/sites-available/.
-🔧 Manutenção
+
+### 🔧 Manutenção
 Para parar o Nginx:
 sudo systemctl stop nginx
 Para reiniciar o Nginx:
 sudo systemctl restart nginx
-1️⃣0️⃣ Verificar Seu IP
+
+### 1️⃣0️⃣ Verificar Seu IP
 Verifique seu IP:
 ip addr show
 
-1️⃣1️⃣ Testar as Configurações pelo Terminal
+### 1️⃣1️⃣ Testar as Configurações pelo Terminal
 mkdir atividade_linux
 cd atividade_linux
 nano verificar_nginx.sh
+
 Adicione à última linha o seguinte script:
 #!/bin/bash
 # Variáveis
@@ -82,30 +88,28 @@ else
     echo "$DATA_HORA - $SERVICO - OFFLINE - O serviço está parado." >> $OFFLINE
 fi
 Salve no nano: Ctrl + O, Enter, Ctrl + X.
-1️⃣2️⃣ Configurar o Crontab
+### 1️⃣2️⃣ Configurar o Crontab
 chmod +x verificar_nginx.sh
 crontab -e
 Escolha a opção número 1 e adicione:
 */5 * * * /home/tales/atividade_linux/verificar_nginx.sh
 Salve no crontab: Ctrl + O, Enter, Ctrl + X.
-1️⃣3️⃣ Colocar Seus Dados do GitHub
+### 1️⃣3️⃣ Colocar Seus Dados do GitHub
 git init
 git add .
 git commit -m "Versão inicial da atividade"
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-1️⃣4️⃣ Verificar a Aplicação
+### 1️⃣4️⃣ Verificar a Aplicação
 ./verificar_nginx.sh
 cat online.log
 
 Para parar a aplicação:
-bash
-Copiar código
 sudo systemctl stop nginx
 Aplique o teste estando offline:
-1️⃣5️⃣ Verificar Resultados com Grep
+### 1️⃣5️⃣ Verificar Resultados com Grep
 
-1️⃣6️⃣ Resultado Final
+### 1️⃣6️⃣ Resultado Final
 
 🎉 Parabéns!
 Você conseguiu! O servidor está rodando como o esperado!!
