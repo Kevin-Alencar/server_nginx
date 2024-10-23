@@ -1,0 +1,65 @@
+ 1  su
+    2  sudo apt uptade
+    3  sudo apt update
+    4  sudo apt install nginx
+    5  whereis nginx
+    6  sudo systemctl status nginx
+    7  nano verificar_gnix.sh
+    8  chmod+x verificar_nginx.sh
+    9  chmod +x verificar_nginx.sh
+   10  NEW
+   11  [12:18 AM]
+   12  ./verificar_nginx.sh
+   13  crontab -e
+   14  git init
+   15  ls
+   16  cd atividade_linux
+   17  git add atividade_linux/
+   18  git add .
+   19  ls
+   20  cd atividade_linux
+   21  ls
+   22  mkdir atividade_linux
+   23  ls
+   24  cd atividade_linux
+   25  nano verificar_nginx.sh
+   26  crontab -e
+   27  nano verificar_nginx.sh
+   28  crontab -e
+   29  git init
+   30  git add.
+   31  git add atividade_linux/
+   32  git add 'atividade_linux/'
+   33  git add 'atividade_linux'
+   34  git add atividade_linux.sh
+   35  ls
+   36  git status
+   37  git add atividade_linux...
+   38  git add verificar_nginx.sh
+   39  git commit -m "Versão inicial"
+   40  git conf --global user.email "kevinalencar982"
+   41  git config --global user.email "kevinalencar982@gmail.com"
+   42  git confiig --global user.name "Kevin-Alencar"
+   43  git config --global user.name "Kevin-Alencar"
+   44  pwd
+   45  git config --global --list
+   46  crontab -l
+   47  git status
+   48  crontab -e
+   49  crontab -l
+   50  sudo systemctl status nginx
+   51  systemctl status nginx
+   52  ls
+   53  systemctl start nginx
+   54  sudo systemctl start  nginx
+   55  systemctl start nginx
+   56  su
+   57  sudo
+   58  systemctl start nginx
+   59  sudo systemctl start  nginx
+   60  su
+   61  root
+   62  systemctl start nginx
+   63  su
+   64  ip addr show
+   65  history
