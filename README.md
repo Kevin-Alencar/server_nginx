@@ -64,6 +64,8 @@ sudo systemctl restart nginx
 Verifique seu IP:
 ip addr show
 
+![image](https://github.com/user-attachments/assets/ac0d746a-747b-43d7-96f9-dec2a4ef9254)
+
 ### 1️⃣1️⃣ Testar as Configurações pelo Terminal
 mkdir atividade_linux
 cd atividade_linux
@@ -109,7 +111,9 @@ sudo systemctl stop nginx
 Aplique o teste estando offline:
 ### 1️⃣5️⃣ Verificar Resultados com Grep
 
-### 1️⃣6️⃣ Resultado Final
+![image](https://github.com/user-attachments/assets/887a8a59-2057-4311-8203-955d49450b4d)
 
+### 1️⃣6️⃣ Resultado Final
+![image](https://github.com/user-attachments/assets/03dbd9d7-702a-444b-a8f8-620b56e8f4dc)
 🎉 Parabéns!
 Você conseguiu! O servidor está rodando como o esperado!!
