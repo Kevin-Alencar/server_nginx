@@ -57,3 +57,16 @@ Passo 10: Manutenção
 - Para reiniciar o Nginx:
   sudo systemctl restart nginx
 
+  Passo 11: Verificar seu IP e depois colar na URL do navegador
+
+  ip addr show
+  ![image](https://github.com/user-attachments/assets/ac0d746a-747b-43d7-96f9-dec2a4ef9254)
+
+  - Após colar na URL do navegador:
+    ![image](https://github.com/user-attachments/assets/e14b5b3d-1c05-4b78-a9e5-22278d609cf8)
+
+
+
+
+  
+
