@@ -1,5 +1,4 @@
 # server_nginx
-markdown
 # 🌐 Server Nginx
 
 ## 📋 Passo a Passo para Instalação
