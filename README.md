@@ -49,7 +49,7 @@ Abra um navegador e digite o IP da sua máquina virtual (descubra o IP com ifcon
 
 Parabéns, seu servidor está ativo com sucesso!!
 
-### 9️⃣ Configurações Adicionais (do passo 9 em diante)
+### 9️⃣ Configurações Adicionais (opcional) (do passo 9 em diante)
 Para iniciar o Nginx automaticamente na inicialização:
 
 sudo systemctl enable nginx
