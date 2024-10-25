@@ -47,7 +47,9 @@ sudo systemctl status nginx
 ### 8️⃣ Testar a Instalação
 Abra um navegador e digite o IP da sua máquina virtual (descubra o IP com ifconfig ou ip addr). Você deve ver a página padrão do Nginx.
 
-### 9️⃣ Configurações Adicionais (Opcional)
+Parabéns, seu servidor está ativo com sucesso!!
+
+### 9️⃣ Configurações Adicionais (do passo 9 em diante)
 Para iniciar o Nginx automaticamente na inicialização:
 
 sudo systemctl enable nginx
