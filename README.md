@@ -1,78 +1,78 @@
-# server_nginx
-# 🌐 Server Nginx
+🌐 Server Nginx
+📋 Passo a Passo para Instalação
+💻 Instalar Linux no Windows (WSL)
+O WSL é um subsistema Linux dentro do Windows, que permite rodar comandos e programas de Linux sem precisar instalar o sistema operacional em outra partição.
 
-## 📋 Passo a Passo para Instalação
+Passo 1: Habilitar o WSL
+Digite "Windows PowerShell" na barra de pesquisa, clique com o botão direito do mouse e selecione "Executar como administrador".
 
-### 1️⃣ Instalar o Oracle VM VirtualBox
-- Baixe e instale o [Oracle VM VirtualBox](https://www.virtualbox.org/) a partir do site oficial.
+No PowerShell, digite o seguinte comando para instalar o WSL:
 
-### 2️⃣ Baixar a Imagem do Debian
-- Baixe a ISO do [Debian](https://www.debian.org/) a partir do site oficial.
+bash
+wsl --install
+Isso habilitará o WSL e, se necessário, baixará automaticamente uma distribuição Linux (normalmente o Ubuntu).
+Caso não instale o Ubuntu automaticamente, use o comando:
+bash
+wsl --install -d Ubuntu-20.04
+Substitua "20.04" por uma versão mais recente se preferir, como "22.04".
 
-### 3️⃣ Criar uma Nova Máquina Virtual
-- Abra o VirtualBox.
-- Clique em "Novo" para criar uma nova máquina virtual.
-- Dê um nome à VM (exemplo: `Debian_nginx`).
-- Selecione o tipo: **Linux** e versão: **Debian 12 (64-bit)**.
-- Alocar memória RAM (recomendo pelo menos **1024 MB**).
-- Crie um disco rígido virtual, selecionando "Criar um disco rígido virtual agora".
-- Escolha o tipo de disco (recomendo **VDI**) e tamanho do disco (pelo menos **10 GB**).
+Conclua a instalação e faça login, anotando sua senha.
 
-### 4️⃣ Configurar a Máquina Virtual
-- Com a VM selecionada, clique em "Configurações".
-- Vá para "Armazenamento" e clique no ícone de disco vazio.
-- No lado direito, clique no ícone de disco e selecione "Escolher um disco existente".
-- Selecione a ISO do Debian que você baixou.
+Passo 2: Reiniciar o Computador
+Reinicie o computador para concluir a configuração do WSL. Após a reinicialização, verifique se o WSL está funcionando com o comando:
 
-### 5️⃣ Iniciar a Máquina Virtual
-- Clique em "Iniciar" para ligar a máquina virtual.
-- Siga as instruções na tela para instalar o Debian. 
+bash
+wsl -l -v
+Passo 3: Acessar o Terminal do Ubuntu
+Agora você pode abrir o terminal do Ubuntu diretamente pela barra de pesquisa ou executando o comando a seguir no PowerShell:
 
-### 6️⃣ Instalar o Nginx
-- Atualize os pacotes. Abra o terminal e digite:
-  ```bash
-  sudo apt update
-  sudo apt upgrade
+bash
+wsl
+🌐 Instalar o Nginx
+Passo 4: Atualizar Pacotes e Instalar o Nginx
+Abra o terminal e atualize os pacotes:
+bash
+sudo apt update
+sudo apt upgrade
 Instale o Nginx:
+bash
 sudo apt install nginx
-
-### 7️⃣ Iniciar o Nginx
+Passo 5: Iniciar o Nginx
 Inicie o Nginx com o comando:
-
+bash
 sudo systemctl start nginx
 Verifique se o Nginx está rodando:
-
+bash
 sudo systemctl status nginx
-
-### 8️⃣ Testar a Instalação
-Abra um navegador e digite o IP da sua máquina virtual (descubra o IP com ifconfig ou ip addr). Você deve ver a página padrão do Nginx.
-
-Parabéns, seu servidor está ativo com sucesso!!
-
-### 9️⃣ Configurações Adicionais (opcional) (do passo 9 em diante)
+Passo 6: Testar a Instalação
+Abra um navegador e digite o IP da sua máquina (verifique o IP com ifconfig ou ip addr).
+A página padrão do Nginx deverá aparecer. Parabéns, seu servidor está ativo!
+🔧 Configurações Adicionais (opcional)
 Para iniciar o Nginx automaticamente na inicialização:
-
+bash
 sudo systemctl enable nginx
-Para configurar Nginx para um site específico, edite ou crie arquivos de configuração na pasta /etc/nginx/sites-available/.
-
-### 🔧 Manutenção
+Para configurar o Nginx para um site específico, edite ou crie arquivos de configuração em /etc/nginx/sites-available/.
+⚙️ Manutenção do Nginx
 Para parar o Nginx:
+bash
 sudo systemctl stop nginx
 Para reiniciar o Nginx:
+bash
 sudo systemctl restart nginx
+📝 Criar Script de Verificação do Nginx
+Crie um diretório para a atividade e entre nele:
 
-### 1️⃣0️⃣ Verificar Seu IP
-Verifique seu IP:
-ip addr show
-
-![image](https://github.com/user-attachments/assets/ac0d746a-747b-43d7-96f9-dec2a4ef9254)
-
-### 1️⃣1️⃣ Testar as Configurações pelo Terminal
+bash
 mkdir atividade_linux
 cd atividade_linux
-nano verificar_nginx.sh
+Crie o script verificar_nginx.sh:
 
-Adicione à última linha o seguinte script:
+bash
+nano verificar_nginx.sh
+Adicione o seguinte conteúdo ao script:
+
+bash
+Copiar código
 #!/bin/bash
 # Variáveis
 DATA_HORA=$(date '+%Y-%m-%d %H:%M:%S')
@@ -90,31 +90,48 @@ if [ "$STATUS" = "active" ]; then
 else
     echo "$DATA_HORA - $SERVICO - OFFLINE - O serviço está parado." >> $OFFLINE
 fi
-Salve no nano: Ctrl + O, Enter, Ctrl + X.
-### 1️⃣2️⃣ Configurar o Crontab
+Salve e saia (Ctrl + O, Enter, Ctrl + X).
+
+⏲️ Configurar o Crontab
+Torne o script executável:
+
+bash
 chmod +x verificar_nginx.sh
+Abra o crontab para edição:
+
+bash
 crontab -e
 Escolha a opção número 1 e adicione:
-*/5 * * * /home/tales/atividade_linux/verificar_nginx.sh
-Salve no crontab: Ctrl + O, Enter, Ctrl + X.
-### 1️⃣3️⃣ Colocar Seus Dados do GitHub
+
+bash
+*/5 * * * * /home/tales/atividade_linux/verificar_nginx.sh
+Isso executará o script a cada 5 minutos.
+🔗 Configurar o GitHub
+Inicialize um repositório Git e faça um commit inicial:
+
+bash
 git init
 git add .
 git commit -m "Versão inicial da atividade"
+Configure seu nome de usuário e e-mail:
+
+bash
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-### 1️⃣4️⃣ Verificar a Aplicação
+✅ Verificar a Aplicação e Logs
+Execute o script para testar:
+
+bash
 ./verificar_nginx.sh
 cat online.log
+Pare o Nginx e execute o script novamente para verificar o log offline:
 
-Para parar a aplicação:
+bash
 sudo systemctl stop nginx
-Aplique o teste estando offline:
-### 1️⃣5️⃣ Verificar Resultados com Grep
+Use o grep para verificar ocorrências específicas nos logs:
 
-![image](https://github.com/user-attachments/assets/887a8a59-2057-4311-8203-955d49450b4d)
+bash
+grep "OFFLINE" offline.log
+🎉 Resultado Final
+Seu servidor Nginx está configurado e monitorado com sucesso!
 
-### 1️⃣6️⃣ Resultado Final
-![image](https://github.com/user-attachments/assets/03dbd9d7-702a-444b-a8f8-620b56e8f4dc)
-🎉 Parabéns!
-Você conseguiu! O servidor está rodando como o esperado!!
