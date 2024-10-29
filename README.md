@@ -90,6 +90,7 @@ Adicione o seguinte conteúdo ao script:
         echo "$DATA_HORA - $SERVICO - OFFLINE - O serviço está parado." >> $OFFLINE
     fi
 
+para sair e salvar o conteúdo pressione ctrl+o ; enter  ; ctrl+x
 Torne o script executável:
 
     chmod +x verificar_nginx.sh
@@ -106,6 +107,7 @@ Adicione a linha abaixo para executar o script a cada 5 minutos:
 
     */5 * * * * /home/usuario/atividade_linux/verificar_nginx.sh
 
+para sair e salvar o conteúdo pressione ctrl+o ; enter  ; ctrl+x
 🔗 Configurar o GitHub
 
 Inicialize o Git e faça o commit inicial:
