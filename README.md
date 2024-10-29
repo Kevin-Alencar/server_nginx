@@ -52,6 +52,7 @@ Passo 5: Iniciar e Verificar o Nginx
 Inicie o Nginx:
 
     sudo systemctl start nginx
+    sudo systemctl enable nginx
 
 Verifique o status do serviço:
     
