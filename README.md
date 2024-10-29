@@ -110,6 +110,23 @@ Adicione a linha abaixo para executar o script a cada 5 minutos:
 para sair e salvar o conteúdo pressione ctrl+o ; enter  ; ctrl+x
 🔗 Configurar o GitHub
 
+Primeiramente, faça login com sua conta no GitHub pelo o terminal:
+
+```gh auth login``` 
+
+Selecione GitHub.com como a conta que você deseja acessar.
+Escolha HTTPS.
+Confirme com Y
+Login with a web browser.
+Copie o código, cole no navegador e clique em continue
+se for sua primeira vez, insira o código de 8 dígitos presente no terminal.
+Agora, verifique seu login com o comando:
+
+```gh auth status```
+
+
+Seu github está configurado e sincronizado.
+
 Inicialize o Git e faça o commit inicial:
 
 
