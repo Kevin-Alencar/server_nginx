@@ -1,38 +1,84 @@
-1  apt install nginx
-    2  sudo apt install nginx
-    3  apt update
-    4  sudo apt update
-    5  sudo apt upgrade
-    6  sudo systemctl start nginx
-    7  sudo systemctl status nginx
-    8  ls
-    9  pwd
-   10  mkdir atividade_linux
-   11  ls
-   12  cd atividade_linux
-   13  nano verificar_nginx.sh
-   14  chmod +x verificar_nginx.sh
-   15  crontab -e
-   16  git init
-   17  git add .
-   18  git commit -m "Versão inicial da atividade"
-   19  git config --global user.email "kevinalencar982@gmail.com"
-   20  git config --global user.name "Kevin-Alencar"
-   21  ./verificar_nginx.sh
-   22  cat online.log
-   23  sudo systemctl stop nginx
-   24  cat offline.log
-   25  ls
-   26  sudo systemctl stop nginx
-   27  cat offline.log
-   28  ./verificar_nginx.sh
-   29  cat offline.log
-   30  grep CRON /var/log/syslog
-   31  git status
-   32  git config --global user.email "kevinalencar982@gmail.com"
-   33  git config --global user.name "Kevin-Alencar"
-   34  git config --global --list
-   35  git log
-   36  git commit -m "Versão inicial da atividade"
-   37  git log
-   38  history
+  170  cd atividade_linux
+  171  nano verificar_nginx.sh
+  172  chmod +x verificar_nginx.sh
+  173  contrab -e
+  174  crontab -e
+  175  git init
+  176  ./verificar_nginx.sh
+  177  cat online.log
+  178  crontab -e
+  179  cat online.log
+  180  git status
+  181  sudp systemctl stop nginx
+  182  sudo systemctl stop nginx
+  183  cat online.log
+  184  git status
+  185  cat online.log
+  186  sudo systemctl stop nginx
+  187  cat offline.log
+  188  cat online.log
+  189  ./verificar_nginx.sh
+  190  cat offline.log
+  191  cat online.log
+  192  crontab -e
+  193  sudo status nginx
+  194  sudo apt status nginx
+  195  sudo systemctl status nginx
+  196  ./verificar_nginx.sh
+  197  cat online.log
+  198  cat offline.log
+  199  cat online.log
+  200  sudo systemctl start nginx
+  201  sudo systemctl enable nginx
+  202  ./verificar_nginx.sh
+  203  cd
+  204  ./verificar_nginx.sh
+  205  cd atividade_linux
+  206  git status
+  207  sudo apt update
+  208  sudo apt upgrade
+  209  sudo apt install -y nginx
+  210  sudo systemctl start nginx
+  211  cd atividade_linux
+  212  nano verificar_nginx.sh
+  213  chmod +x verificar_nginx.sh
+  214  crontab -e
+  215  git init
+  216  git add .
+  217  git commit -m "Versao incial da atividade"
+  218  git --help
+  219  git config --global user,email "kevinalencar982@gmail.com"
+  220  git config --global user.email "kevinalencar982@gmail.com"
+  221  git config --global user.name "Kevin-Alencar"
+  222  ./verificar_nginx.sh
+  223  cat online.log
+  224  cat offline,log
+  225  cat offline.log
+  226  git status
+  227  gh auth login
+  228  sudo snap install gh
+  229  gh auth login
+  230  gh auth status
+  231  git init
+  232  git add .
+  233  git add ./verificar_nginx
+  234  git add .verificar_nginx
+  235  git add verificar_nginx
+  236  git add atividade_linux
+  237  git add .
+  238  git commit -m "Versão inicial"
+  239  git remote add origin https://github.com/Kevin-Alencar/Versão-inicial.git
+  240  git push -u origin master
+  241  git remote add origin https://github.com/Kevin-Alencar/.
+  242  cd
+  243  git push -u origin master
+  244  git remote add origin https://github.com/Kevin-Alencar/atividade_linux
+  245  cat online.log
+  246  sudo systemctl stop nginx
+  247  sudo systemctl daemon-reload
+  248  sudo systemctl stop nginx
+  249  cat offline.log
+  250  cat online.log
+  251  cat offline.log
+  252  sudo systemctl start nginx
+  253  history
