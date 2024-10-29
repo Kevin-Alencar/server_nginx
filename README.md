@@ -58,6 +58,8 @@ Verifique o status do serviço:
     sudo systemctl status nginx
 
 Teste a instalação acessando http://localhost no navegador.
+![image](https://github.com/user-attachments/assets/31b36fda-7675-4f18-b288-8e2e2fba877f)
+
 
 ⚙️ Verificar o Status do Nginx
 
